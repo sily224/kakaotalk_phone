@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>try</title>
+        <style>
+            h1 {
+                border: 5px solid red;
+            }
+            body {
+                width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header, nav, section, article, aside, footer {
+                text-align: center;
+                width: 400px;
+                margin: 5px;
+                padding: 5px;
+            }
+            header {
+                background: #f8bbd0;
+            }
+            nav {
+                background: #e1bee7;
+            }
+            section {
+                width: 300px;
+                height: 160px;
+                background: #b39ddb;
+                float: left;
+            }
+            article {
+                width: 280px;
+                background: #e6ee9c;
+            }
+            aside {
+                width: 80px;
+                height: 160px;
+                background: #64b5f6;
+                float: left;
+            }
+            footer{
+                background: #80cbc4;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="submit" name="myButton" value="foo">Click me</button>
+        <h1>안녕!</h1>
+        <header>header</header>
+        <nav>nav</nav>
+        <section>section
+          <article>article 1</article>
+          <article>article 2</article>
+          <article>article 3</article>
+        </section>
+        <aside>aside</aside>
+        <footer>footer</footer>
+        <form action="/examples/media/action_target.php" method="post">
+            아이디 : <input type="text" name="user_id"><br>
+            비밀번호 : <input type="password" name="user_pw"><br>
+            <input type="hidden" id="gameToken" name="game_token" value="xm234jq">
+            <input type="submit">
+            <p>This content should be read right now, as it is important. I am so glad you are able to find it!</p>
+            <p hidden>This content is not relevant to this page right now, so should not be seen. Nothing to see here. Nada.</p>
+        </form>
+    </body>    
+</html>

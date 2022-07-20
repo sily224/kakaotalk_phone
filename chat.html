@@ -2,50 +2,50 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>kakaotalk</title>
+        <title>HahaotalkChat</title>
+        <script src="https://kit.fontawesome.com/0fea8f69a7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="reset.css">
         <style>
             body {
                 background-color: #B2C7DA;
                 margin: 0;
                 min-width: 300px;
             }
-            .top {
-                box-sizing: border-box;
+            .top.box {
+                line-height: 25px;
+                padding: 10px;
                 background-color: #9AAEBC;
-                width: 100%;
-                height: 35px;
             }
-            .phone {
-                padding: 5px;
-            } 
-            .kt, .wifi {
+            .kt {
                 float: left;
-                font-weight: bold;
-                padding-right : 5px;
+                padding-right: 5px;
+                font-size: 20px;
             }
-            .wifi {
+            .fa-solid.fa-wifi {
                 width: 15px;
                 height: 20px;
             }
-            .battery {
-                float: right;
-                width: 25px;
+            .fa-solid.fa-battery-three-quarters {
+                float: right; 
+                width: 20px;
+                margin-top: 13px;
+                margin-left: 5px;
             }
             .time {
-                float:right;
-                margin: 0;
+                float: right;
+                font-size: 20px;
             }
             .first {
                 background-color: #B2C7DA;
                 width: 100%;
-                height: 80px;
+                height: 70px;
             }
-            .arrowleft {
+            .fa-arrow-left-long {
                 float: left;
                 box-sizing: border-box;
                 display: gird;
                 align-items:center;
-                height: 80px;
+                height: 70px;
                 width:50px;
                 padding: 20px 10px;
                 margin-left: 10px
@@ -55,29 +55,36 @@
                 box-sizing: border-box;
                 display: gird;
                 align-items:center;
-                height: 80px;
-                padding: 25px 10px;
+                height: 70px;
+                padding: 25px 10px 20px 10px;
                 font-weight: bold;
                 font-size: 23px;
             }
-            .bars {
+            .fa-bars {
                 float: right;
                 box-sizing: border-box;
                 display: grid;
                 align-items:center;
-                height: 80px;
-                padding: 20px 5px;
-                margin-right: 15px
+                height: 70px;
+                padding: 20px 10px;
             }
-            .search {
+            .fa-magnifying-glass {
                 float: right;
                 box-sizing: border-box;
                 display: grid;
                 align-items:center;
-                height: 80px;
-                padding: 25px 15px;
+                height: 70px;
+                padding: 20px 10px;
+            }
+            a:hover, a:link, a:visited, a:active {
+                color: black
             }
             .chatting {
+                height: 200px;
+                clear: both;
+                display: flex;
+            }
+            .item.picture {
                 height: 200px;
             }
             .social {
@@ -85,7 +92,10 @@
                 width: 65px;
                 margin: 10px 10px;
             }
-            .chat {
+            .item.chat {
+                font-size: 15px;
+            }
+            .item.speak {
                 float: left;
                 margin-top: 20px;
             }
@@ -97,8 +107,8 @@
                 box-sizing: border-box;
                 padding: 10px;
                 margin: 10px;
+                font-size: 15px;
             }
-
             .speech-bubble:after {
             	content: '';
             	position: absolute;
@@ -121,6 +131,7 @@
                 box-sizing: border-box;
                 padding: 10px;
                 margin: 10px;
+                font-size: 15px;
             }
             .speech-bubble1:after {
             	content: '';
@@ -136,72 +147,68 @@
             	margin-left: 0px;
             	margin-bottom: 0px;
             }
-            .d1 {
-                position: fixed;
-                top: 155px;
-                left: 85px;
+            .items { 
+                margin-top: 10px;
             }
-            .d2 {
-                position: fixed;
-                top: 205px;
-                
-            }
-            .d3 {
-                position: fixed;
-                top: 255px;
-            }
-            .d4 {
-                position: fixed;
-                top: 283px;
-                left: 175px;
-                font-size: 13px;
-                color: #586470;
+            .chat-time {
+                position: relative;
+                top: 150px
             }
             .footer {
+                display: flex;  
                 position: absolute;
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                padding: 15px 0;
-                text-align: center;
+                padding: 10px 0px;
                 color: black;
                 background: #F9F9FB;
                 border-top: 1px solid #E7E7E9;
-                display: flex;
-                height: 20px;
+                height: 30px;
+                justify-content: space-between;
             }
-            .footer {
-                justify-content: space-around;
-            }   
+            .icon {
+                padding: 0px 5px;
+                line-height: 30px;
+            }
+            .sharp {
+                font-size: 30px;
+            }
         </style>
     </head>
     <body>
-        <div class="top">
-            <div class="phone kt">KT</div>
-            <img class="phone wifi" src="wifi-solid.svg" alt="wifi">
-            <img class="phone battery" src="battery-three-quarters-solid.svg" alt="battery">
-            <b class="phone time">11:11</b>
+        <div class="top box">
+            <b class="kt">KT</b>
+            <i class="fa-solid fa-wifi" alt="wifi"></i>           
+            <i class="fa-solid fa-battery-three-quarters fa-lg" alt="battery"></i>
+            <b class="time">11:11</b>
         </div>
         <div class="first">
-            <a href="2.html">
-                <img class="arrowleft" src="arrow-left-solid.svg" alt="arrow-left">
+            <a href="list.html">
+                <i class="fa-solid fa-arrow-left-long fa-2x" alt="back"></i>
             </a>
             <div class="firend1">도토리</div>
-            <img class="bars" src="bars-solid.svg" alt="bars">
-            <img class="search" src="magnifying-glass-solid.svg" alt="search">
+            <i class="fa-solid fa-bars fa-2x" alt="list"></i>
+            <i class="fa-solid fa-magnifying-glass fa-2x" alt="search"></i>
         </div>
         <div class="chatting">
-            <img class="social" src="kakaotalk-social.png" alt="social">
-            <div class="chat">도토리</div><br><br>
-            <span class="speech-bubble d1">뭐해?</span><br>
-            <span class="speech-bubble1 d2">자니?</span><br>
-            <span class="speech-bubble1 d3">밖이야?</span>
-            <span class="d4">오후 11:11</span>
+            <div class="item picture" >
+                <img class="social" src="kakaotalk-social.png" alt="social">
+            </div>
+            <div class="item speak">
+                <div class="item chat">도토리</div>
+                <div class="items speech-bubble">뭐해?</div>
+                <div class="items speech-bubble1">자니?</div>
+                <div class="items speech-bubble1">밖이야?</div>
+            </div>
+            <div class="item chat-time">오후 11:11</div>
         </div>
         <footer class="footer">
-            <img class="plus" src="plus-solid.svg" alt="plus">
-            <img class="emoticon" src="face-smile-solid.svg" alt="emoticon">
-            <div class="sharp">#</div>
+            <div class="icon left"><i class="fa-solid fa-plus fa-2x" alt="plus"></i></div>
+            <div class="icon right">
+                <i class="fa-solid fa-face-smile fa-2x" alt="emoticon"></i>
+                <div class="fa-solid sharp">#</div>
+            </div>
         </footer>
     </body>    
 </html>
